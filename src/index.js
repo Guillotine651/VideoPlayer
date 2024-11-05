@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import connectdatabase from "./db/db.js";
-
+import app from './app.js';
 
 dotenv.config();
 
@@ -11,7 +11,7 @@ connectdatabase().then(
     }
     ),
 
-    app.listen(process.env.PORT||8000 , ()=>
+    app.listen(process.env.PORT||4002 , ()=>
     {   
         console.log(`listening on port no ${process.env.PORT}`)
     })
